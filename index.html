@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Card</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="img-box">
+        <div class="content">
+          <h1>Hridoy Saha</h1>
+          <h3>Web | Software | E-commerce</h3>
+          <h4>Mail:hsaha171087@bscse.uiu.ac.bd</h4>
+          <button class="btn-phone"><i class="fa fa-phone"></i></button>
+        </div>
+        </div>
+        <div class="inner-box inner-over">
+        <div class="contact">
+          <div class="cancel fa fa-times"></div>
+          <input type="email" placeholder="Enter your Email" />
+          <textarea
+            cols="30"
+            rows="1"
+            placeholder="Enter your Message..."
+          ></textarea>
+          <button class="sendBtn">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const innerBox = document.querySelector(".inner-box");
+      const btnPhone = document.querySelector(".btn-phone");
+      const cancel = document.querySelector(".cancel");
+
+      
+      btnPhone.addEventListener("click", function() {
+        innerBox.classList.toggle("inner-over");
+        innerBox.classList.toggle("expand");
+      });
+
+      cancel.addEventListener("click", function() {
+        innerBox.classList.toggle("inner-over");
+        innerBox.classList.toggle("expand");
+      });
+    </script>
+  </body>
+</html>
