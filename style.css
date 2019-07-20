@@ -1,0 +1,209 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        position: relative;
+        height: 500px;
+        width: 900px;
+      }
+      .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background: url("./gif3.gif") no-repeat center/cover;
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+        transition: all 0.5s 0.3s;
+        overflow: hidden;
+      }
+
+      .card:hover .img-box {
+        clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+      }
+
+      .img-box:before {
+        content: "";
+        position: absolute;
+        height: 120%;
+        width: 120%;
+        border-radius: 10px 0 10px 10px;
+        background: linear-gradient(to bottom left, #00d0ff, red);
+        opacity: 0;
+        transition: 0.7s 0.5s;
+        clip-path: circle(10.4% at 0 100%);
+      }
+
+      .card:hover .img-box:before {
+        opacity: 0.8;
+        clip-path: circle(141.4% at 0 100%);
+      }
+
+      .content {
+        position: relative;
+        top: 60px;
+        text-align: center;
+        font-family: "Roboto";
+        z-index: 1;
+        transform: translateY(300px) scale(0);
+        opacity: 0;
+        transition: 0.6s;
+        
+      }
+
+      .card:hover .content {
+        transition-delay: 0.5s;
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+      }
+
+      .content h1 {
+        font-size: 60px;
+      }
+
+      .content h3 {
+        font-size: 25px;
+        font-weight: 400;
+        padding: 10px 0;
+      }
+      .content h4 {
+        font-size:18px;
+        font-weight:400;
+
+
+
+      }
+
+      .btn-phone {
+        font-size: 30px;
+        background: #00d0ff;
+        outline: none;
+        border: none;
+        color: black;
+        padding: 20px;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+
+      .btn-phone:hover {
+        background: #04a5c9;
+      }
+      .sendBtn{
+        font-size: 30px;
+        background: #00d0ff;
+      }
+      .sendBtn:hover{
+        background: #99D8E8;
+
+      }
+
+      .inner-box {
+        position: absolute;
+        height: 102%;
+        width: 102%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        clip-path: polygon(60% 0, 100% 0%, 100% 40%, 80% 20%);
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      .inner-over {
+        background: linear-gradient(to top right, red, 30%,#00d0ff);
+      }
+
+      .card:hover .inner-over {
+        transition-delay: 0.4s;
+        opacity: 1;
+        clip-path: polygon(50% 0, 100% 0%, 100% 50%, 75% 25%);
+      }
+
+      .expand {
+        transition-delay: 0.4s;
+        opacity: 1;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        background: linear-gradient(
+            to top right,
+            rgba(255, 0, 0, 0.5),
+            30%,
+            #00d0ff
+          ),
+          url("./gif4.gif");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .expand .contact {
+        transition-delay: 0.3s;
+        transform: translateY(0px) scale(1);
+      }
+
+      .cancel {
+        position: absolute;
+        font-size: 35px;
+        color: rgba(255, 0, 0, 0.7);
+        top: 15px;
+        right: 30px;
+      }
+
+      .cancel:hover {
+        color: rgb(255, 0, 0);
+      }
+
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        font-family: "Roboto";
+        transform: translateY(400px) scale(0);
+        transition: 0.5s;
+      }
+
+      .contact input,
+      .contact textarea {
+        border: none;
+        border-radius: 2px;
+        padding: 15px 0;
+        background: #fff;
+        color: #000;
+        outline: none;
+        margin: 20px 0;
+        width: 310px;
+        padding-left: 10px;
+        box-shadow: 0 0 20px #00d0ff;
+      }
+
+      .contact input {
+        font-size: 20px;
+        border-radius: 4px;
+      }
+
+      .contact textarea {
+        font-size: 16px;
+        border-radius: 4px;
+        font-family: "Roboto";
+      }
+
+      .contact button {
+        font-size: 20px;
+        padding: 10px 30px;
+        background: #fff;
+        color: black;
+        border-radius: 20px;
+        border: none;
+        margin-top: 10px;
+        outline: none;
+      }
